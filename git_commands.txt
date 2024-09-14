@@ -5,3 +5,4 @@ git branch -d <branch name> #Simple delete if branches have been merged
 git branch -D <branch name> #Force delete
 git add .\git_commands.txt
 git push -u -f origin main #Pushes the changes from your local repository to the remote repository.
+git push origin main #To push changes from your local Git repository to a remote repository
