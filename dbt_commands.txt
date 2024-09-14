@@ -1,0 +1,11 @@
+dbt debug
+dbt compile
+dbt run
+dbt seed
+dbt --version
+
+{{
+    config(
+        materialized='table' //or view
+    )
+}}
