@@ -6,3 +6,17 @@ git branch -D <branch name> #Force delete
 git add .\git_commands.txt
 git push -u -f origin main #Pushes the changes from your local repository to the remote repository.
 git push origin main #To push changes from your local Git repository to a remote repository
+
+To create a new branch in Git and switch to it, you can use the following command:
+git checkout -b <branch_name>
+checkout -b: This creates a new branch and switches to it immediately.
+to create a branch called feature-xyz:
+git checkout -b feature-xyz
+
+Pushing the New Branch to GitHub. After creating the branch locally, you will typically want to push it to GitHub. 
+To do that, use:
+git push -u origin <branch_name>
+For example:
+git push -u origin feature-xyz
+The -u flag sets the upstream reference, so future pushes and pulls on this branch can be done without 
+specifying the remote and branch name.
