@@ -4,9 +4,11 @@ git pull origin main
 git branch -d <branch name> #Simple delete if branches have been merged
 git branch -D <branch name> #Force delete
 git add .\git_commands.txt
+git commit -m "Comment"
 git push -u -f origin main #Pushes the changes from your local repository to the remote repository.
 git push origin main #To push changes from your local Git repository to a remote repository
 
+<<<<<<< HEAD
 Once you're in the repository, pull the latest changes from the remote (usually origin) and the branch you're working on 
 (for example, main):
 
@@ -26,3 +28,18 @@ If needed, switch to the correct branch using:
 
 git checkout <branch_name>
 Then pull the latest changes for that branch.
+=======
+To create a new branch in Git and switch to it, you can use the following command:
+git checkout -b <branch_name>
+checkout -b: This creates a new branch and switches to it immediately.
+to create a branch called feature-xyz:
+git checkout -b feature-xyz
+
+Pushing the New Branch to GitHub. After creating the branch locally, you will typically want to push it to GitHub. 
+To do that, use:
+git push -u origin <branch_name>
+For example:
+git push -u origin feature-xyz
+The -u flag sets the upstream reference, so future pushes and pulls on this branch can be done without 
+specifying the remote and branch name.
+>>>>>>> 3913da66de322b55f47a4b712d689ff0a2a1552d
