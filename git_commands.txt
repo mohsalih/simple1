@@ -1,0 +1,5 @@
+git status
+git checkout main
+git pull origin main
+git branch -d <branch name> #Simple delete if branches have been merged
+git branch -D <branch name> #Force delete
