@@ -1,6 +1,7 @@
 git status
 git checkout main
 git pull origin main
+git merge MS-Feature //To merge the branch into your current branch (HEAD)
 git branch -d <branch name> #Simple delete if branches have been merged
 git branch -D <branch name> #Force delete
 git add .\git_commands.txt
