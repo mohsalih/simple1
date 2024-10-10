@@ -24,8 +24,6 @@ git add models/transformation_layer/split_b2b_dia.sql
 To commit changes to the staging area.
 git commit -m "Comment"
 
-
-
 To merge the branch into your current branch (HEAD)
 git merge MS-Feature 
 
