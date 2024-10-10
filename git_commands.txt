@@ -18,6 +18,9 @@ git add .
 Or just commit one fileto the staging area
 git add .\git_commands.txt
 
+Or add one file 
+git add models/transformation_layer/split_b2b_dia.sql
+
 To commit changes to the staging area.
 git commit -m "Comment"
 
