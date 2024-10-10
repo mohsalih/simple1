@@ -1,3 +1,12 @@
+To create a new branch in Git and switch to it, you can use the following command:
+git checkout -b <branch_name>
+checkout -b: This creates a new branch and switches to it immediately.
+
+To create a branch called feature-xyz:
+git checkout -b feature-xyz
+
+
+
 git status
 git checkout main
 git pull origin main
@@ -28,11 +37,7 @@ If needed, switch to the correct branch using:
 
 git checkout <branch_name>
 Then pull the latest changes for that branch.
-To create a new branch in Git and switch to it, you can use the following command:
-git checkout -b <branch_name>
-checkout -b: This creates a new branch and switches to it immediately.
-to create a branch called feature-xyz:
-git checkout -b feature-xyz
+
 
 Pushing the New Branch to GitHub. After creating the branch locally, you will typically want to push it to GitHub. 
 To do that, use:
