@@ -5,44 +5,6 @@ checkout -b: This creates a new branch and switches to it immediately.
 To create a branch called feature-xyz and switch to it immediately:
 git checkout -b feature-xyz
 
-To commit changes to the staging area.
-git commit -m "Comment"
-
-Or just commit one fileto the staging area
-git add .\git_commands.txt
-
-
-
-git status
-git checkout main
-git pull origin main
-git merge MS-Feature //To merge the branch into your current branch (HEAD)
-git branch -d <branch name> #Simple delete if branches have been merged
-git branch -D <branch name> #Force delete
-
-
-git push -u -f origin main #Pushes the changes from your local repository to the remote repository.
-git push origin main #To push changes from your local Git repository to a remote repository
-
-Once you're in the repository, pull the latest changes from the remote (usually origin) and the branch you're working on 
-(for example, main):
-
-git pull origin main
-This command fetches and integrates the latest changes from the remote repository’s main branch into your local repository.
-
-If you're working on another branch (e.g., dev), you can specify that branch:
-git pull origin dev
-
-3. Ensure you're on the correct branch: If you're unsure which branch you're on, you can check with:
-git branch
-
-This will show a list of branches, with an asterisk (*) indicating the currently active branch. 
-
-If needed, switch to the correct branch using:
-git checkout <branch_name>
-Then pull the latest changes for that branch.
-
-
 Pushing the New Branch to GitHub. After creating the branch locally, you will typically want to push it to GitHub. 
 To do that, use:
 git push -u origin <branch_name>
@@ -50,12 +12,55 @@ git push -u origin <branch_name>
 For example:
 git push -u origin feature-xyz
 
+To commit changes to the staging area.
+git commit -m "Comment"
+
+Or just commit one fileto the staging area
+git add .\git_commands.txt
+
+To merge the branch into your current branch (HEAD)
+git merge MS-Feature 
+
+To push changes from your local Git repository to a remote repository
+git push origin main 
+
+To push changes from your local Git repository to a remote repository with force.
+git push -u -f origin main 
+
+To create merge request on remote repository
+Use GUI on GitLab
+
+#Simple delete if branches have been merged
+git branch -d <branch name> 
+
+#Force delete
+git branch -D <branch name> 
+
+Once you're in the repository, pull the latest changes from the remote (usually origin) and the branch you're working on 
+(for example, main). This command fetches and integrates the latest changes from the remote repository’s main branch into your local repository.
+git pull origin main
+
+git status
+git checkout main
+git pull origin main
+
+If you're working on another branch (e.g., dev), you can specify that branch:
+git pull origin dev
+
+Ensure you're on the correct branch: If you're unsure which branch you're on, you can check with. This will show a list of branches, with an asterisk (*) indicating the currently active branch. 
+git branch
+
+To switch to the correct branch using:
+git checkout <branch_name>
+
+Then pull the latest changes for that branch.
+
 The -u flag sets the upstream reference, so future pushes and pulls on this branch can be done without 
 specifying the remote and branch name.
 
 To check whether your local and remote repositories are in sync or to compare them, you can use the following commands in Git:
 
-1. Check for Differences Using git fetch and git status:
+Check for Differences Using git fetch and git status:
 The simplest way to check if your local repository is up-to-date with the remote is to first fetch any changes from the remote repository and then check the status.
 
 
@@ -73,7 +78,7 @@ Your branch is ahead of 'origin/main' by 2 commits.
 If your branch is up-to-date:
 Your branch is up to date with 'origin/main'.
 
-2. Compare Local and Remote Using git log:
+Compare Local and Remote Using git log:
 To compare the differences in commits between your local branch and the remote branch, you can use:
 git log origin/<branch>..<branch>
 
@@ -81,7 +86,7 @@ For example, to compare your local main branch with the remote origin/main, run:
 git log origin/main..main
 This will show the commits that are in your local main branch but not in the remote origin/main branch.
 
-3. Compare Local and Remote Using git diff:
+Compare Local and Remote Using git diff:
 If you want to compare the actual code changes between your local branch and the remote branch, you can use:
 git diff <local_branch> <remote_branch>
 
@@ -89,7 +94,7 @@ For example, to compare your local main with origin/main:
 git diff main origin/main
 This will show the differences between the two branches.
 
-4. Check if Local and Remote Are Synchronized Using git rev-list:
+Check if Local and Remote Are Synchronized Using git rev-list:
 You can check the number of commits by running:
 git rev-list --left-right --count origin/main...main
 This will return a result like 1 2, where:
