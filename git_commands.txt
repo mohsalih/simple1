@@ -12,11 +12,16 @@ git push -u origin <branch_name>
 For example:
 git push -u origin feature-xyz
 
-To commit changes to the staging area.
-git commit -m "Comment"
+To add all modified and new changes to the staging area.
+git add .
 
 Or just commit one fileto the staging area
 git add .\git_commands.txt
+
+To commit changes to the staging area.
+git commit -m "Comment"
+
+
 
 To merge the branch into your current branch (HEAD)
 git merge MS-Feature 
@@ -31,6 +36,7 @@ To create merge request on remote repository
 Use GUI on GitLab
 
 #Simple delete if branches have been merged
+git checkout main
 git branch -d <branch name> 
 
 #Force delete
