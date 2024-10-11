@@ -26,6 +26,8 @@ git commit -m "Comment"
 
 To merge the branch into your current branch (HEAD)
 git merge MS-Feature 
+Or
+git merge origin/ms-feature
 
 To push changes from your local Git repository to a remote repository
 git push origin main 
